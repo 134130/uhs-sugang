@@ -1,0 +1,17 @@
+{
+   "manifest_version": 3,
+   "action": {
+      "default_title": "uhs-sugang",
+      "default_popup": "popup.html"
+   },
+   "permissions": [
+      "storage",
+      "unlimitedStorage",
+      "webRequest"
+   ],
+   "host_permissions": [
+      "*://*/*"
+   ],
+   "name": "uhs-sugang",
+   "version": "0.0.1"
+}

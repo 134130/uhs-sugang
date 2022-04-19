@@ -1,0 +1,271 @@
+@charset "UTF-8";
+html {
+  font-family: "Segoe UI", "맑은 고딕";
+}
+
+body {
+  overflow: overlay;
+  max-width: 84em;
+  margin: 4em auto 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  width: 100%;
+  cursor: pointer;
+}
+
+button:hover {
+  background: gainsboro;
+}
+
+.card {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  background: white;
+  margin-bottom: 80px;
+}
+
+#searchTable {
+  width: 84em;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+#searchTable th {
+  text-align: right;
+  font-weight: 600;
+  padding: 10px 2px;
+}
+
+#searchTable th:not(:first-child) {
+  padding-left: 20px;
+}
+
+#searchTable td {
+  padding: 0 2px;
+}
+
+#searchTable td select, #searchTable td input {
+  height: 2.2em;
+  font-size: 1em;
+  border: 1px solid gainsboro;
+  padding: 0 5px;
+  width: 100%;
+}
+
+#searchTable button {
+  padding: 0.2em 1em;
+}
+
+#searchTable tr#span_major {
+  display: none;
+}
+
+#searchTable tr#span_area {
+  display: none;
+}
+
+#searchTable tr#span_track {
+  display: none;
+}
+
+#resultTableWrapper, #myLectTableWrapper {
+  display: block;
+  overflow-y: overlay;
+  max-height: 30.1em;
+}
+
+#resultTableWrapper::-webkit-scrollbar, #myLectTableWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+#resultTableWrapper::-webkit-scrollbar-track, #myLectTableWrapper::-webkit-scrollbar-track {
+  margin-top: 2.2em;
+}
+
+#resultTable, #myLectTable {
+  display: table;
+  width: 100%;
+  font-size: 1em;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+#resultTable th, #myLectTable th {
+  font-weight: 600;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#resultTable td, #myLectTable td {
+  text-align: center;
+}
+
+#resultTable thead th, #myLectTable thead th {
+  padding: 0.4em 0;
+  background: #c8c8c8;
+  border-bottom: 1px solid #969696;
+}
+
+#resultTable thead th:first-child, #myLectTable thead th:first-child {
+  padding-left: 0.8em;
+}
+
+#resultTable thead th:last-child, #myLectTable thead th:last-child {
+  padding-right: 0.8em;
+}
+
+#resultTable tbody tr, #myLectTable tbody tr {
+  border-bottom: 1px solid gainsboro;
+}
+
+#resultTable tbody tr:hover, #myLectTable tbody tr:hover {
+  background: #f0f0f0;
+}
+
+#resultTable tbody tr:last-child, #myLectTable tbody tr:last-child {
+  border-bottom: none;
+}
+
+#resultTable tbody td, #myLectTable tbody td {
+  padding: 0.4em 0;
+}
+
+#resultTable tbody td:first-child, #myLectTable tbody td:first-child {
+  padding-left: 0.8em;
+}
+
+#resultTable tbody td:last-child, #myLectTable tbody td:last-child {
+  padding-right: 0.8em;
+}
+
+#myLectTable .total td {
+  border-top: 1px solid #969696;
+  background: #f0f0f0;
+}
+
+#myLectTable .total ~ .total td {
+  border-top: none;
+}
+
+#myLectTable .total ~ .total:last-child td {
+  border-top: 1px solid #969696;
+  background: #c8c8c8;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#lectCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+
+#lectCards .lect_card {
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+#lectCards .lect_card .lect_type {
+  font-weight: 600;
+}
+
+#lectCards .lect_card .lect_cd {
+  float: right;
+  color: #969696;
+}
+
+#lectCards .lect_card .lect_title {
+  display: block;
+  text-align: center;
+  padding: 0.4em;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+#lectCards .lect_card .lect_time {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 4em;
+  margin-right: 2em;
+}
+
+#lectCards .lect_card .lect_prof {
+  float: right;
+}
+
+#lectCards .lect_card .lect_people {
+  float: right;
+}
+
+#lectCards .lect_card .lect_place {
+  color: #969696;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 8em;
+  margin-right: 2em;
+}
+
+#lectCards .lect_card.success {
+  background: linear-gradient(311.31deg, #c7e3f2 -0.03%, #d0eae9 96.4%);
+}
+
+#lectCards .lect_card.fail {
+  background: linear-gradient(92.88deg, #fdc8c8 13.58%, #eac3d0 98.22%);
+}
+
+#timer {
+  margin-bottom: 2em;
+  margin-right: 1em;
+  width: 50em;
+}
+
+#console {
+  width: 24.7em;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  margin: 2em 0;
+}
+/*# sourceMappingURL=default.css.map */

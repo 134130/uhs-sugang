@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  margin-top: 30vh;
+  display: inline-block;
+  width: 10em;
+}
+
+.login input {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  margin-bottom: 4px;
+}
+/*# sourceMappingURL=login.css.map */
